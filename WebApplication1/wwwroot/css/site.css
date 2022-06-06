@@ -1,0 +1,143 @@
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Homemade+Apple&family=Odibee+Sans&family=Oswald&family=Playfair+Display:ital@1&family=Rajdhani:wght@300&family=Smooch&family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+head .script {
+    color: beige;
+}
+
+.container {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(background.jpeg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-position: 0px 55px;
+}
+
+    .container .nav {
+        width: 100%;
+        height: 58px;
+        background-color: rgba(0, 0, 0, 0.70);
+    }
+
+ul {
+    float: right;
+    margin-right: 100px;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 8px;
+}
+
+.time {
+    display: inline-block;
+}
+
+.logo .time a {
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Homemade Apple', cursive;
+    color: white;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 15px;
+    margin-top: 18px;
+    user-select: none;
+}
+
+    .nav ul li a {
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif;
+        padding: 10px 10px;
+        user-select: none;
+    }
+
+        .nav ul li a.active,
+        .nav ul li a:hover {
+            background: gainsboro;
+            color: black;
+            border-radius: 10px;
+        }
+
+body .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Rajdhani', sans-serif;
+    user-select: none;
+}
+
+    body .center h1 {
+        color: white;
+        text-align: center;
+        font-weight: medium;
+        font-size: 23px;
+        padding: 10px 10px;
+    }
+
+    body .center p {
+        color: white;
+        text-align: center;
+        font-weight: medium;
+        font-size: 45px;
+    }
+
+body .buttons {
+    text-align: center;
+}
+
+    body .buttons button {
+        height: 50px;
+        width: 150px;
+        font-size: 18px;
+        font-family: 'Oswald', sans-serif;
+        background: rgb(248, 248, 255);
+        border: solid 2px black;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 100px;
+        outline: none;
+        transition: 0.4s;
+    }
+
+        body .buttons button:hover {
+            background: black;
+            color: rgb(248, 248, 255);
+            border: solid 2px rgb(248, 248, 255);
+        }

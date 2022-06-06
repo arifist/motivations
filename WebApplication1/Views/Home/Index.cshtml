@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTİVATİON'S</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <script>
+        function clickCounter()
+        {
+        if(typeof(Storage)!=="undefined")
+          {
+          if (localStorage.clickcount)
+            {
+            localStorage.clickcount=Number(localStorage.clickcount)+1;
+            }
+          else
+            {
+            localStorage.clickcount=1;
+            }
+          document.getElementById("result").innerHTML= "Bu aldığımız " + localStorage.clickcount + ". beğeni :)";
+          document.getElementById("result").style.color='#fff';
+          document.getElementById("result").style.fontSize='25px';
+          }
+        else
+          {
+          document.getElementById("result").innerHTML="Tarayıcınız bu özelliği desteklemiyor.";
+          }
+        }
+        </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <a href="#">☀ motivations.</a>
+                <div class="time">
+                    <a href="#">| Her güne yeniden başlayın!</a>
+                </div>
+            </div>
+            <ul>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Hakkında">Hakkında</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Iletisim">Iletisim</a></li>
+
+                
+            </ul>
+        </div>
+        <div class="center">
+            <h1>Günün sözü ;</h1>
+            <p>
+                @foreach(var i in Model)
+                {
+                    @i.soz
+                }
+
+
+                
+            </p>
+            <div class="buttons">
+                <p><button onclick="clickCounter()" type="button">Siteyi Beğen!</button></p>
+                <div id="result"></div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options = {
+  bottom: '50px', // default: '32px'
+  right: '50px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '1s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#fff',  // default: '#100f2c'
+  buttonColorLight: '#000', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🖤', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+</body>
+</html>
